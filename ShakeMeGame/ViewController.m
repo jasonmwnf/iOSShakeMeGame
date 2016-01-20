@@ -69,4 +69,14 @@
     }
 
 }
+
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (event.subtype == UIEventSubtypeMotionShake) {
+        if (modeInt == 1) {
+            scoreInt += 1;
+            self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreInt];
+
+        }
+    }
+}
 @end
